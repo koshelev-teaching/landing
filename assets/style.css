@@ -155,7 +155,7 @@ a {
   margin: 0;
 }
 
-.lang-block p+p {
+.lang-block p + p {
   margin-top: 1rem;
 }
 
@@ -164,8 +164,22 @@ a {
   padding-left: 1.4rem;
 }
 
-.lang-block li+li {
+.lang-block li + li {
   margin-top: 0.45rem;
+}
+
+/* text links inside content */
+
+.lang-block a {
+  color: var(--fg);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.lang-block a:hover,
+.lang-block a:focus-visible {
+  opacity: 0.7;
 }
 
 /* footer */
@@ -235,6 +249,29 @@ a {
   color: var(--muted);
 }
 
+/* dark mode */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #000000;
+    --fg: #ffffff;
+    --muted: #b8b8b8;
+    --line: #3a3a3a;
+  }
+
+  .top-bar {
+    background: #ffffff;
+  }
+
+  .hero-symbol-wrap {
+    background: #ffffff;
+  }
+
+  .hero-symbol {
+    filter: invert(1) brightness(0);
+  }
+}
+
 /* mobile */
 
 @media (max-width: 640px) {
@@ -273,15 +310,5 @@ a {
   .contact-icon {
     width: 1.9rem;
     height: 1.9rem;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .hero-symbol {
-      filter: invert(1);
-    }
-
-    .hero-symbol-wrap {
-      background: #ffffff;
-    }
   }
 }
