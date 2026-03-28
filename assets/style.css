@@ -1,0 +1,277 @@
+:root {
+  --bg: #ffffff;
+  --fg: #1f2230;
+  --muted: #5a6072;
+  --line: #d7dbe3;
+
+  --page-max: 760px;
+  --text-max: 680px;
+  --hero-symbol-size: 150px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  line-height: 1.7;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.top-bar {
+  width: 100%;
+  height: 4px;
+  background: #000000;
+}
+
+.page {
+  width: min(100% - 2rem, var(--page-max));
+  margin: 0 auto;
+  padding: 3.5rem 0 2.5rem;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-symbol-wrap {
+  width: var(--hero-symbol-size);
+  height: var(--hero-symbol-size);
+  border-radius: 50%;
+  background: #000000;
+  display: grid;
+  place-items: center;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.hero-symbol {
+  width: 95%;
+  height: 95%;
+  object-fit: contain;
+}
+
+.hero-name {
+  margin: 0;
+  font-size: clamp(1.2rem, 3vw, 1.7rem);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.hero-role {
+  margin: 0.5rem 0 0;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.content {
+  margin-top: 3.5rem;
+}
+
+/* language switch */
+
+.lang-switch {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 0 auto 2.25rem;
+  width: min(100%, var(--text-max));
+}
+
+.lang-switch button {
+  appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    color 160ms ease,
+    opacity 160ms ease;
+}
+
+.lang-switch button:hover,
+.lang-switch button:focus-visible {
+  color: var(--fg);
+}
+
+.lang-switch button.active {
+  color: var(--fg);
+}
+
+.lang-switch button:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: 4px;
+}
+
+/* language blocks */
+
+.lang-block {
+  display: none;
+  width: min(100%, var(--text-max));
+  margin: 0 auto;
+}
+
+.lang-block.active {
+  display: block;
+}
+
+.lang-block p {
+  margin: 0;
+}
+
+.lang-block p + p {
+  margin-top: 1rem;
+}
+
+.lang-block ul {
+  margin: 1rem 0;
+  padding-left: 1.4rem;
+}
+
+.lang-block li + li {
+  margin-top: 0.45rem;
+}
+
+/* footer */
+
+.site-footer {
+  width: min(100%, var(--text-max));
+  margin: 3.5rem auto 0;
+}
+
+.footer-divider {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 0 0 1.5rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.9rem;
+  height: 2.9rem;
+  background: transparent;
+  border-radius: 0;
+  transition:
+    transform 160ms ease,
+    opacity 160ms ease;
+}
+
+.contact-icon {
+  width: 2.15rem;
+  height: 2.15rem;
+  display: block;
+  object-fit: contain;
+}
+
+.contact-link:hover,
+.contact-link:focus-visible {
+  transform: translateY(-1px);
+}
+
+.contact-link:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: 3px;
+}
+
+.contact-link[aria-disabled="true"] {
+  opacity: 0.38;
+}
+
+.contact-link[aria-disabled="true"]:hover,
+.contact-link[aria-disabled="true"]:focus-visible {
+  transform: none;
+  outline: none;
+}
+
+.footer-note {
+  margin: 1rem 0 0;
+  text-align: center;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+/* mobile */
+
+@media (max-width: 640px) {
+  :root {
+    --hero-symbol-size: 128px;
+  }
+
+  .page {
+    width: min(100% - 1.25rem, var(--page-max));
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .content {
+    margin-top: 2.75rem;
+  }
+
+  .lang-switch {
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .site-footer {
+    margin-top: 3rem;
+  }
+
+  .contact-links {
+    gap: 0.6rem;
+  }
+
+  .contact-link {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+
+  .contact-icon {
+    width: 1.9rem;
+    height: 1.9rem;
+  }
+}
