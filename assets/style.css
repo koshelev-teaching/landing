@@ -156,7 +156,7 @@ a {
   margin: 0;
 }
 
-.lang-block p + p {
+.lang-block p+p {
   margin-top: 1rem;
 }
 
@@ -165,7 +165,7 @@ a {
   padding-left: 1.4rem;
 }
 
-.lang-block li + li {
+.lang-block li+li {
   margin-top: 0.45rem;
 }
 
@@ -317,5 +317,13 @@ a {
   .contact-icon {
     width: 1.9rem;
     height: 1.9rem;
+  }
+
+  .rules-text {
+    margin: 0;
+  }
+
+  .rules-text+.rules-text {
+    margin-top: 0.9rem;
   }
 }
