@@ -74,7 +74,7 @@
 
     .subpage-nav {
       width: min(100%, var(--text-max));
-      margin: 0 auto 2.25rem;
+      margin: 2rem auto 2.25rem;
       text-align: center;
     }
 
@@ -90,7 +90,7 @@
 
     @media (max-width: 640px) {
       .subpage-nav {
-        margin-bottom: 2rem;
+        margin: 1.5rem auto 2rem;
       }
 
       .rules-group+.rules-group {
@@ -103,13 +103,25 @@
 <body>
   <div class="top-bar" aria-hidden="true"></div>
 
+  <nav class="site-nav" aria-label="Primary">
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="rules.html">RULES</a></li>
+      <li><a href="about.html">CONTACTS</a></li>
+    </ul>
+  </nav>
+
   <main class="page">
     <header class="hero" aria-label="Identity">
       <div class="hero-symbol-wrap">
         <img class="hero-symbol" src="assets/img/vesica-piscis.svg" alt="Vesica piscis symbol">
       </div>
 
-      <h1 class="hero-name">Lesson Rules</h1>
+      <h1 class="hero-name">
+        <span class="hero-lang active" data-lang="en">Lesson Rules</span>
+        <span class="hero-lang" data-lang="ru">Правила занятий</span>
+        <span class="hero-lang" data-lang="fr">Règles des cours</span>
+      </h1>
     </header>
 
     <section class="content" aria-label="Lesson rules content">
@@ -119,245 +131,316 @@
         <button data-lang="fr">FR</button>
       </div>
 
-      <div class="rules-shell">
-        <!-- EN -->
-        <section class="lang-block active" data-lang="en">
-          <div class="rules-card">
-            <p class="rules-intro">
-              This page contains the basic rules of lessons. The text below is a placeholder structure: you can now
-              replace it with your final wording.
+      <!-- EN -->
+      <section class="lang-block" data-lang="en">
+        <div class="rules-card">
+
+          <section class="rules-group">
+            <h2 class="rules-group-title">Format</h2>
+            <p class="rules-text">
+              Lessons are conducted primarily <strong>online</strong>, although <strong>offline sessions</strong> are
+              possible by prior arrangement, depending on your location.
             </p>
+          </section>
 
-            <section class="rules-group">
-              <h2 class="rules-group-title">1. Schedule</h2>
-              <ul class="rules-list">
-                <li>Placeholder: indicate on which days lessons are usually held.</li>
-                <li>Placeholder: indicate how the lesson time is agreed upon.</li>
-                <li>Placeholder: specify the standard lesson duration.</li>
-              </ul>
-            </section>
-
-            <section class="rules-group">
-              <h2 class="rules-group-title">2. Lateness</h2>
-              <ul class="rules-list">
-                <li>Placeholder: explain what happens if the student is late.</li>
-                <li>Placeholder: explain whether the lesson is extended or ends at the original time.</li>
-              </ul>
-            </section>
-
-            <section class="rules-group">
-              <h2 class="rules-group-title">3. Rescheduling and cancellation</h2>
-              <ul class="rules-list">
-                <li>Placeholder: specify how far in advance a lesson may be rescheduled.</li>
-                <li>Placeholder: specify what happens in case of late cancellation.</li>
-                <li>Placeholder: specify exceptions, if any.</li>
-              </ul>
-            </section>
-
-            <section class="rules-group">
-              <h2 class="rules-group-title">4. Missed lessons</h2>
-              <ul class="rules-list">
-                <li>Placeholder: define what counts as a missed lesson.</li>
-                <li>Placeholder: state whether a missed lesson is charged in full or in part.</li>
-              </ul>
-            </section>
-
-            <section class="rules-group">
-              <h2 class="rules-group-title">5. Additional notes</h2>
-              <ul class="rules-list">
-                <li>Placeholder: homework policy.</li>
-                <li>Placeholder: communication channel for urgent notices.</li>
-                <li>Placeholder: any individual conditions you want to add.</li>
-              </ul>
-            </section>
-
-            <p class="rules-note">
-              Last updated: [date]
+          <section class="rules-group">
+            <h2 class="rules-group-title">Communication</h2>
+            <p class="rules-text">
+              I use several platforms for my lessons — <strong>Google Meet</strong>,
+              <strong>Discord</strong>, <strong>Microsoft Teams</strong> and <strong>Zoom</strong>. If necessary, I can
+              adapt to whichever platform is most convenient for the student.
             </p>
-          </div>
-        </section>
+          </section>
 
-        <!-- RU -->
-        <section class="lang-block" data-lang="ru">
-          <div class="rules-card">
-
-            <section class="rules-group">
-              <h2 class="rules-group-title">Формат</h2>
-              <p class="rules-text">
-                Занятия проводятся преимущественно <strong>онлайн</strong>, хотя по предварительной договорённости
-                возможны и офлайн-встречи, если позволяет география.
-              </p>
-            </section>
-
-            <section class="rules-group">
-              <h2 class="rules-group-title">Связь</h2>
-              <p class="rules-text">
-                Я использую различные платформы для связи — прежде всего <strong>Google Meet</strong>,
-                <strong>Discord</strong>, <strong>Microsoft Teams</strong> и <strong>Zoom</strong>. При необходимости я
-                могу подстроиться под ту среду, которая удобна конкретному ученику.
-              </p>
-            </section>
-
-            <section class="rules-group">
-              <h2 class="rules-group-title">Инструменты</h2>
-              <p class="rules-text">
-                Главный инструмент на моих уроках — виртуальная доска
-                <a href="https://idroo.com" target="_blank" rel="noopener noreferrer"><strong>Idroo</strong></a>,
-                на которой могу писать как я, так и ученики. Для доступа достаточно сделать войти через Google-аккаунт —
-                отдельная регистрация не требуется. Нередко привлекаются и другие инструменты.
-              </p>
-              <p class="rules-text">
-                На доске удобнее всего работать со стилусом на планшете. Подойдёт как iPad, так и обычный графический
-                планшет, который несложно заказать в интернете (базовые модели стоят порядка 50 USD). Если такой
-                возможности пока нет, можно печатать на клавиатуре или писать мышью — это менее удобно, но вполне
-                рабочий вариант.
-              </p>
-            </section>
-
-            <section class="rules-group">
-              <h2 class="rules-group-title">Продолжительность занятия</h2>
-              <p class="rules-text">
-                Стандартное часовое занятие длится <strong>55 минут</strong>. Полуторачасовое занятие длится <strong>85
-                  минут</strong> и включает <strong>пятиминутный перерыв</strong>, обязательный как для ученика, так и
-                для
-                меня. Более длительные занятия строятся по той же логике.
-              </p>
-              <p class="rules-text">
-                Во время перерыва я рекомендую встать, немного размяться, попить воды и хотя бы на полминуты перевести
-                взгляд вдаль, чтобы расслабить глаза.
-              </p>
-            </section>
-
-            <section class="rules-group">
-              <h2 class="rules-group-title">Отмены</h2>
-              <p class="rules-text">
-                Занятие можно свободно отменить заранее. Крайний срок для отмены — <strong>вечер накануне
-                занятия</strong>, при условии, что я увидел сообщение и подтвердил отмену. Отмена ночью или в день
-                занятия уже невозможна: в таком случае занятие считается проведённым и оплачивается независимо от
-                явки.
-              </p>
-            </section>
-
-            <section class="rules-group">
-              <h2 class="rules-group-title">Домашние задания</h2>
-              <p class="rules-text">
-                Домашние задания не являются обязательными: можно заниматься только на самих уроках.
-                Тем не менее я <em>настоятельно рекомендую</em> работать самостоятельно и всегда готов подобрать вам
-                дополнительные задачи, вопросы для размышления и темы для исследования.
-              </p>
-              <p class="rules-text">
-                Оформлять домашнюю работу допустимо в любом формате и на любом носителе. Её можно даже не показывать
-                полностью, а лишь сообщать о результатах и обсуждать возникающие вопросы. Такой режим хорошо
-                подходит ученикам, серьёзно относящимся к собственному обучению.
-              </p>
-            </section>
-
-            <section class="rules-group">
-              <h2 class="rules-group-title">Обстановка на занятии</h2>
-              <p class="rules-text">
-                Я стараюсь поддерживать на уроках открытую, дружелюбную и вместе с тем уважительную атмосферу — и ожидаю
-                того же от моих учеников. На видео-связи я не настаиваю: нередко человеку легче сосредоточиться, когда
-                на него не смотрят.
-              </p>
-              <p class="rules-text">
-                Также ничего не имею против того, чтобы ученик занимал во время занятия то положение тела, которое ему
-                удобно — в кровати, за столом, под столом, в ванной и так далее. Главное, чтобы это помогало сосредоточиться, а не мешало работе.
-              </p>
-            </section>
-          </div>
-        </section>
-
-        <!-- FR -->
-        <section class="lang-block" data-lang="fr">
-          <div class="rules-card">
-            <p class="rules-intro">
-              Cette page contient les règles générales des cours. Le texte ci-dessous est pour l’instant une structure
-              provisoire : tu peux maintenant la remplacer par ta formulation finale.
+          <section class="rules-group">
+            <h2 class="rules-group-title">Tools</h2>
+            <p class="rules-text">
+              The main tool I use is the virtual whiteboard
+              <a href="https://idroo.com" target="_blank" rel="noopener noreferrer"><strong>Idroo</strong></a>,
+              where both the student and I can write. To access it, you can simply sign in with your Google account — no
+              separate registration is required. Other tools may also be used when appropriate.
             </p>
-
-            <section class="rules-group">
-              <h2 class="rules-group-title">1. Horaires</h2>
-              <ul class="rules-list">
-                <li>Texte provisoire : indique les jours habituels des cours.</li>
-                <li>Texte provisoire : indique comment l’horaire est fixé.</li>
-                <li>Texte provisoire : précise la durée standard d’un cours.</li>
-              </ul>
-            </section>
-
-            <section class="rules-group">
-              <h2 class="rules-group-title">2. Retards</h2>
-              <ul class="rules-list">
-                <li>Texte provisoire : explique ce qui se passe en cas de retard de l’élève.</li>
-                <li>Texte provisoire : précise si le cours est prolongé ou s’il se termine à l’heure prévue.</li>
-              </ul>
-            </section>
-
-            <section class="rules-group">
-              <h2 class="rules-group-title">3. Report et annulation</h2>
-              <ul class="rules-list">
-                <li>Texte provisoire : précise le délai minimal pour reporter un cours.</li>
-                <li>Texte provisoire : précise ce qui se passe en cas d’annulation tardive.</li>
-                <li>Texte provisoire : indique les éventuelles exceptions.</li>
-              </ul>
-            </section>
-
-            <section class="rules-group">
-              <h2 class="rules-group-title">4. Absences</h2>
-              <ul class="rules-list">
-                <li>Texte provisoire : définis ce qui compte comme absence.</li>
-                <li>Texte provisoire : indique si l’absence est facturée intégralement ou partiellement.</li>
-              </ul>
-            </section>
-
-            <section class="rules-group">
-              <h2 class="rules-group-title">5. Remarques supplémentaires</h2>
-              <ul class="rules-list">
-                <li>Texte provisoire : politique concernant les devoirs.</li>
-                <li>Texte provisoire : canal de communication pour les messages urgents.</li>
-                <li>Texte provisoire : toute condition particulière à ajouter.</li>
-              </ul>
-            </section>
-
-            <p class="rules-note">
-              Dernière mise à jour : [date]
+            <p class="rules-text">
+              The board is most convenient to use with a stylus on a tablet. Both an iPad and a standard graphics tablet
+              will work; the latter can be easily purchased online (basic models cost around 50 USD). If this option is
+              not available, you can still type on a keyboard or write with a mouse — this is less convenient,
+              but perfectly workable.
             </p>
-          </div>
-        </section>
-      </div>
-    </section>
+          </section>
 
-    <div style="margin-top: 2rem;">
+          <section class="rules-group">
+            <h2 class="rules-group-title">Lesson duration</h2>
+            <p class="rules-text">
+              A standard one-hour lesson lasts <strong>55 minutes</strong>. A 1.5-hour lesson lasts <strong>85
+                minutes</strong> and includes a <strong>five-minute break</strong>, which is essential for both the
+              student and myself. Longer sessions follow the same structure.
+            </p>
+            <p class="rules-text">
+              During the break, I recommend standing up, stretching a little, drinking some water, and looking into the
+              distance for at least half a minute to relax the eyes.
+            </p>
+          </section>
+
+          <section class="rules-group">
+            <h2 class="rules-group-title">Cancellations</h2>
+            <p class="rules-text">
+              Lessons can be freely cancelled in advance. The latest possible time for cancellation is the
+              <strong>evening before the lesson</strong>, provided I have seen the message and confirmed it.
+              Cancellations during the night or on the day of the lesson are not possible: in such
+              cases, the lesson is considered to have taken place and is charged in full, regardless of whether you
+              attend.
+            </p>
+          </section>
+
+          <section class="rules-group">
+            <h2 class="rules-group-title">Homework</h2>
+            <p class="rules-text">
+              Homework is not mandatory: you can work only during the lessons if you prefer. However, I
+              <em>strongly recommend</em> working independently and am always ready to provide additional problems,
+              questions
+              for reflection, and topics for further exploration.
+            </p>
+            <p class="rules-text">
+              Homework may be completed in any format and on any medium. It does not necessarily have to be shown to me
+              in full — it is enough to report the results and discuss any questions that arise. This approach works
+              particularly well for students who take their learning process seriously.
+            </p>
+          </section>
+
+          <section class="rules-group">
+            <h2 class="rules-group-title">Lesson environment</h2>
+            <p class="rules-text">
+              I aim to maintain an open, friendly, and respectful atmosphere during lessons — and
+              expect the same from my students. I do not insist on having the camera on: often it is easier to
+              concentrate when you're not being watched.
+            </p>
+            <p class="rules-text">
+              I also have no objection to students choosing whatever position is most comfortable during the lesson — in
+              bed, at a desk, under the desk, in the bathroom and so on, as long as it helps concentration rather than
+              gets in the way.
+            </p>
+          </section>
+
+        </div>
+      </section>
+
+      <!-- RU -->
+      <section class="lang-block" data-lang="ru">
+        <div class="rules-card">
+
+          <section class="rules-group">
+            <h2 class="rules-group-title">Формат</h2>
+            <p class="rules-text">
+              Занятия проводятся преимущественно <strong>онлайн</strong>, хотя по предварительной договорённости
+              возможны и офлайн-встречи, если позволяет география.
+            </p>
+          </section>
+
+          <section class="rules-group">
+            <h2 class="rules-group-title">Связь</h2>
+            <p class="rules-text">
+              Я использую различные платформы для связи — прежде всего <strong>Google Meet</strong>,
+              <strong>Discord</strong>, <strong>Microsoft Teams</strong> и <strong>Zoom</strong>. При необходимости я
+              могу подстроиться под ту платформу, которая удобна конкретному ученику.
+            </p>
+          </section>
+
+          <section class="rules-group">
+            <h2 class="rules-group-title">Инструменты</h2>
+            <p class="rules-text">
+              Главный инструмент на моих уроках — виртуальная доска
+              <a href="https://idroo.com" target="_blank" rel="noopener noreferrer"><strong>Idroo</strong></a>,
+              на которой могу писать как я, так и ученики. Для доступа достаточно войти через Google-аккаунт —
+              отдельная регистрация не требуется. Нередко привлекаются и другие инструменты.
+            </p>
+            <p class="rules-text">
+              На доске удобнее всего работать со стилусом на планшете. Подойдёт как iPad, так и обычный графический
+              планшет, который несложно заказать в интернете (базовые модели стоят порядка 50 USD). Если такой
+              возможности пока нет, можно печатать на клавиатуре или писать мышью — это менее удобно, но вполне
+              рабочий вариант.
+            </p>
+          </section>
+
+          <section class="rules-group">
+            <h2 class="rules-group-title">Продолжительность занятия</h2>
+            <p class="rules-text">
+              Стандартное часовое занятие длится <strong>55 минут</strong>. Полуторачасовое занятие длится <strong>85
+                минут</strong> и включает <strong>пятиминутный перерыв</strong>, обязательный как для ученика, так и
+              для
+              меня. Более длительные занятия строятся по той же логике.
+            </p>
+            <p class="rules-text">
+              Во время перерыва я рекомендую встать, немного размяться, попить воды и хотя бы на полминуты перевести
+              взгляд вдаль, чтобы расслабить глаза.
+            </p>
+          </section>
+
+          <section class="rules-group">
+            <h2 class="rules-group-title">Отмены</h2>
+            <p class="rules-text">
+              Занятие можно свободно отменить заранее. Крайний срок для отмены — <strong>вечер накануне
+                занятия</strong>, при условии, что я успел увидеть сообщение и подтвердил отмену. Отмена ночью или в
+              день
+              занятия уже невозможна: в таком случае занятие считается проведённым и оплачивается независимо от
+              явки.
+            </p>
+          </section>
+
+          <section class="rules-group">
+            <h2 class="rules-group-title">Домашние задания</h2>
+            <p class="rules-text">
+              Домашние задания не являются обязательными: можно заниматься только на самих уроках.
+              Тем не менее я <em>настоятельно рекомендую</em> работать самостоятельно и всегда готов подобрать вам
+              дополнительные задачи, вопросы для размышления и темы для исследования.
+            </p>
+            <p class="rules-text">
+              Оформлять домашнюю работу допустимо в любом формате и на любом носителе. Её можно даже не показывать
+              полностью, а лишь сообщать о результатах и обсуждать возникающие вопросы. Такой режим хорошо
+              подходит ученикам, серьёзно относящимся к собственному обучению.
+            </p>
+          </section>
+
+          <section class="rules-group">
+            <h2 class="rules-group-title">Обстановка на занятии</h2>
+            <p class="rules-text">
+              Я стараюсь поддерживать на уроках открытую, дружелюбную и вместе с тем уважительную атмосферу — и ожидаю
+              того же от моих учеников. На видео-связи я не настаиваю: нередко человеку легче сосредоточиться, когда
+              на него не смотрят.
+            </p>
+            <p class="rules-text">
+              Также ничего не имею против того, чтобы ученик занимал во время занятия любое удобное ему положение тела:
+              в кровати, за столом, под столом, в ванной и так далее. Главное — чтобы это помогало
+              сосредоточиться, а не мешало работе.
+            </p>
+          </section>
+        </div>
+      </section>
+
+      <!-- FR -->
+      <section class="lang-block" data-lang="fr">
+        <div class="rules-card">
+
+          <section class="rules-group">
+            <h2 class="rules-group-title">Format</h2>
+            <p class="rules-text">
+              Les cours se déroulent principalement <strong>en ligne</strong>; des séances en
+              présentiel sont possibles également, sur accord préalable, si la situation géographique le permet.
+            </p>
+          </section>
+
+          <section class="rules-group">
+            <h2 class="rules-group-title">Communication</h2>
+            <p class="rules-text">
+              J’utilise différentes plateformes pour la communication — <strong>Google Meet</strong>,
+              <strong>Discord</strong>, <strong>Microsoft Teams</strong> et <strong>Zoom</strong>. Si nécessaire, je
+              peux m’adapter à l’outil le plus commode pour l’élève.
+            </p>
+          </section>
+
+          <section class="rules-group">
+            <h2 class="rules-group-title">Outils</h2>
+            <p class="rules-text">
+              L’outil principal de mes cours est le tableau virtuel
+              <a href="https://idroo.com" target="_blank" rel="noopener noreferrer"><strong>Idroo</strong></a>,
+              sur lequel l’élève et moi pouvons écrire tous les deux. Pour y accéder, il suffit de se connecter avec un
+              compte
+              Google — aucune inscription supplémentaire n’est nécessaire. D’autres outils peuvent aussi être utilisés
+              si nécessaire.
+            </p>
+            <p class="rules-text">
+              Le tableau est le plus confortable à utiliser avec un stylet sur une tablette : un iPad ou tout
+              simplement une tablette graphique. La dernière peut être facilement achetée en ligne (les modèles de
+              base coûtent environ 50 USD). Si cette option n’est pas disponible, on peut aussi taper au
+              clavier ou écrire à la souris — c’est moins pratique, mais bien fonctionnel tout de même.
+            </p>
+          </section>
+
+          <section class="rules-group">
+            <h2 class="rules-group-title">Durée des cours</h2>
+            <p class="rules-text">
+              Un cours standard dure <strong>55 minutes</strong>. Un cours d’une heure et demie dure
+              <strong>85 minutes</strong> et comprend une <strong>pause de cinq minutes</strong>, indispensable aussi
+              bien pour l’élève que pour moi. Les séances plus longues suivent la même logique.
+            </p>
+            <p class="rules-text">
+              Pendant la pause, je recommande de se lever, bouger un peu, boire de l’eau et regarder au loin pendant une
+              trentaine de secondes afin de reposer les yeux.
+            </p>
+          </section>
+
+          <section class="rules-group">
+            <h2 class="rules-group-title">Annulations</h2>
+            <p class="rules-text">
+              Les cours peuvent être annulés librement à l’avance. Le moment limite est le <strong>soir précédant le
+                cours</strong>, à condition que j’aie vu le message et confirmé l’annulation. Une annulation pendant la
+              nuit ou le jour même du cours n’est plus possible : dans ce cas, le cours est considéré comme effectué et
+              doit être payé même en cas d'abscence.
+            </p>
+          </section>
+
+          <section class="rules-group">
+            <h2 class="rules-group-title">Devoirs</h2>
+            <p class="rules-text">
+              Les devoirs ne sont pas obligatoires : il est possible de travailler uniquement pendant les cours.
+              Cependant, je <em>recommande fortement</em> un travail personnel et je suis toujours prêt à proposer des
+              exercices supplémentaires, des questions de réflexion et des sujet à explorer.
+            </p>
+            <p class="rules-text">
+              Les devoirs peuvent être réalisés sous n’importe quelle forme et sur n’importe quel support. Il n’est pas
+              obligatoire de me les montrer intégralement : il suffit d’en communiquer les résultats et de discuter des
+              questions qui sont apparues. Cette approche convient particulièrement aux élèves qui prennent la
+              responsabilité personnelle de leur apprentissage.
+            </p>
+          </section>
+
+          <section class="rules-group">
+            <h2 class="rules-group-title">Ambiance des cours</h2>
+            <p class="rules-text">
+              Je m’efforce de maintenir pendant les cours une atmosphère ouverte, bienveillante et en même temps
+              respectueuse — et j’attends la même attitude de la part de mes élèves. Je n’insiste pas pour que la caméra
+              soit activée : il est souvent plus facile de se concentrer quand on n’est pas observé.
+            </p>
+            <p class="rules-text">
+              Je n’ai pas d’objection à ce que l’élève adopte la position qui lui est la plus confortable —
+              dans le lit, au bureau, sous le bureau, dans la salle de bain, etc. L’essentiel est que cela aide à se
+              concentrer et ne gêne pas le travail.
+            </p>
+          </section>
+
+        </div>
+      </section>
+
       <nav class="subpage-nav" aria-label="Back link">
         <a href="index.html">← Back to main page</a>
       </nav>
-    </div>
 
-    <footer class="site-footer" aria-label="Contacts">
-      <hr class="footer-divider">
+      <footer class="site-footer" aria-label="Contacts">
+        <hr class="footer-divider">
 
-      <nav class="contact-links" aria-label="Contact links">
-        <a class="contact-link" href="https://t.me/koshelev_teaching" target="_blank" rel="noopener noreferrer"
-          aria-label="Telegram">
-          <img class="contact-icon" src="assets/img/icons/telegram.svg" alt="">
-        </a>
+        <nav class="contact-links" aria-label="Contact links">
+          <a class="contact-link" href="https://t.me/koshelev_teaching" target="_blank" rel="noopener noreferrer"
+            aria-label="Telegram">
+            <img class="contact-icon" src="assets/img/icons/telegram.svg" alt="">
+          </a>
 
-        <a class="contact-link" href="https://wa.me/995551512975" target="_blank" rel="noopener noreferrer"
-          aria-label="WhatsApp">
-          <img class="contact-icon" src="assets/img/icons/whatsapp.svg" alt="">
-        </a>
+          <a class="contact-link" href="https://wa.me/995551512975" target="_blank" rel="noopener noreferrer"
+            aria-label="WhatsApp">
+            <img class="contact-icon" src="assets/img/icons/whatsapp.svg" alt="">
+          </a>
 
-        <a class="contact-link" href="mailto:koshelev.teaching@gmail.com?subject=Lesson%20Rules" aria-label="Mail">
-          <img class="contact-icon" src="assets/img/icons/mail.svg" alt="">
-        </a>
-      </nav>
+          <a class="contact-link" href="mailto:koshelev.teaching@gmail.com?subject=Lesson%20Rules" aria-label="Mail">
+            <img class="contact-icon" src="assets/img/icons/mail.svg" alt="">
+          </a>
+        </nav>
 
-      <p class="footer-note">© 2026 Alexander Koshelev</p>
-    </footer>
+        <p class="footer-note">© 2026 Alexander Koshelev</p>
+      </footer>
   </main>
 
   <script>
     const buttons = document.querySelectorAll('.lang-switch button');
     const blocks = document.querySelectorAll('.lang-block');
+    const heroLangs = document.querySelectorAll('.hero-lang');
     const storageKey = 'preferredLanguage';
 
     function setLanguage(lang) {
@@ -367,6 +450,10 @@
 
       blocks.forEach(block => {
         block.classList.toggle('active', block.dataset.lang === lang);
+      });
+
+      heroLangs.forEach(el => {
+        el.classList.toggle('active', el.dataset.lang === lang);
       });
 
       localStorage.setItem(storageKey, lang);
