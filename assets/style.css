@@ -152,6 +152,14 @@ a {
   display: inline;
 }
 
+.nav-lang {
+  display: none;
+}
+
+.nav-lang.active {
+  display: inline;
+}
+
 .subpage-nav {
   width: min(100%, var(--text-max));
   margin: 2rem auto 0;
@@ -351,6 +359,11 @@ a {
 
   .top-bar {
     background-color: #ffffff;
+  }
+
+  .site-nav ul {
+    background-color: #ffffff;
+    color: #000000;
   }
 
   .hero-symbol-wrap {

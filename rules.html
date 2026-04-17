@@ -105,9 +105,29 @@
 
   <nav class="site-nav" aria-label="Primary">
     <ul>
-      <li><a href="index.html">HOME</a></li>
-      <li><a href="rules.html">RULES</a></li>
-      <li><a href="about.html">CONTACTS</a></li>
+      <li>
+        <a href="index.html">
+          <span class="nav-lang active" data-lang="en">HOME</span>
+          <span class="nav-lang" data-lang="ru">ГЛАВНАЯ</span>
+          <span class="nav-lang" data-lang="fr">ACCUEIL</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="rules.html">
+          <span class="nav-lang active" data-lang="en">RULES</span>
+          <span class="nav-lang" data-lang="ru">ПРАВИЛА</span>
+          <span class="nav-lang" data-lang="fr">RÈGLES</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="contacts.html">
+          <span class="nav-lang active" data-lang="en">CONTACTS</span>
+          <span class="nav-lang" data-lang="ru">КОНТАКТЫ</span>
+          <span class="nav-lang" data-lang="fr">CONTACTS</span>
+        </a>
+      </li>
     </ul>
   </nav>
 
@@ -441,6 +461,7 @@
     const buttons = document.querySelectorAll('.lang-switch button');
     const blocks = document.querySelectorAll('.lang-block');
     const heroLangs = document.querySelectorAll('.hero-lang');
+    const navLangs = document.querySelectorAll('.nav-lang');
     const storageKey = 'preferredLanguage';
 
     function setLanguage(lang) {
@@ -456,6 +477,10 @@
         el.classList.toggle('active', el.dataset.lang === lang);
       });
 
+      navLangs.forEach(el => {
+        el.classList.toggle('active', el.dataset.lang === lang);
+      });
+
       localStorage.setItem(storageKey, lang);
     }
 
@@ -466,11 +491,19 @@
     });
 
     const savedLang = localStorage.getItem(storageKey);
-    const defaultLang = 'en';
-    const initialLang = savedLang || defaultLang;
 
+    function detectBrowserLanguage() {
+      const browserLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+
+      if (browserLang.startsWith('ru')) return 'ru';
+      if (browserLang.startsWith('fr')) return 'fr';
+      return 'en';
+    }
+
+    const initialLang = savedLang || detectBrowserLanguage();
     setLanguage(initialLang);
   </script>
+
 </body>
 
 </html>
