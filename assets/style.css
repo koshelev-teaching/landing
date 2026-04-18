@@ -264,6 +264,52 @@ a {
   margin-top: 0.9rem;
 }
 
+.bio-aside {
+  margin-left: 1.2rem;
+  padding-left: 0.8rem;
+  border-left: 1px solid var(--line);
+  font-style: italic;
+  color: var(--muted);
+}
+
+.payment-details {
+  width: min(100%, var(--text-max));
+  margin: 1.5rem auto;
+}
+
+.payment-details summary {
+  cursor: pointer;
+  font: inherit;
+  color: var(--fg);
+  list-style: none;
+}
+
+.payment-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.payment-details summary:hover,
+.payment-details summary:focus-visible {
+  opacity: 0.8;
+}
+
+.payment-details-content {
+  margin-left: 1.2rem;
+  margin-top: 1rem;
+}
+
+.payment-details summary::after {
+  content: "›";
+  font-size: 1em;
+  display: inline-block;
+  margin-left: 0.35rem;
+  transition: transform 0.2s ease;
+}
+
+.payment-details[open] summary::after {
+  transform: rotate(90deg);
+}
+
 /* text links inside content */
 
 .lang-block a {
